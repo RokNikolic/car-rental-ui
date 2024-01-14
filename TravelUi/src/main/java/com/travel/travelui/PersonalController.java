@@ -32,11 +32,5 @@ public class PersonalController {
         stage.setScene(scene);
         stage.show();
     }
-    public void final_page(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("final-scene.fxml")));
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
+
 }

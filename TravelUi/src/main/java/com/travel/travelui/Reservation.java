@@ -2,11 +2,11 @@ package com.travel.travelui;
 
 public class Reservation {
     String departureDate;
-    int departureTime;
+    String departureTime;
     String departureLocation;
-    String handInDate;
-    int handInTime;
-    String handInLocation;
+    String returnDate;
+    String returnTime;
+    String returnLocation;
     String carSize;
     String carGearbox;
     String carEngine;

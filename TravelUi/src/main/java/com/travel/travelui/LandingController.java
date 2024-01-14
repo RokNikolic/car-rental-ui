@@ -12,6 +12,7 @@ import java.io.IOException;
 import java.util.Objects;
 
 public class LandingController {
+    public Reservation reservation;
 
     public void new_reservation(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("car1-scene.fxml")));
@@ -20,7 +21,7 @@ public class LandingController {
         stage.setScene(scene);
         stage.show();
 
-        Reservation reservation = new Reservation();
+        reservation = new Reservation();
     }
 
     public void into(ActionEvent e) {

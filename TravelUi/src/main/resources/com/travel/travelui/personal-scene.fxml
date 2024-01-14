@@ -1,69 +1,147 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.travel.travelui.PersonalController">
+<VBox alignment="TOP_CENTER" prefHeight="424.0" prefWidth="795.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.travel.travelui.PersonalController">
    <children>
-      <Text layoutX="319.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Osebni podatki" textAlignment="CENTER" wrappingWidth="502.13671875">
+      <Label text="Osebni podatki">
          <font>
             <Font size="30.0" />
          </font>
-      </Text>
-      <Pane layoutX="31.0" layoutY="59.0" prefHeight="104.0" prefWidth="1218.0">
+      </Label>
+      <Separator prefWidth="200.0" />
+      <VBox>
          <children>
-            <Button layoutX="14.0" layoutY="59.0" mnemonicParsing="false" onAction="#previous_page" prefHeight="31.0" prefWidth="99.0" text="Prejšnja stran" />
-            <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#first_page" prefHeight="31.0" prefWidth="76.0" text="Resetiraj" />
-            <Button layoutX="1040.0" layoutY="59.0" mnemonicParsing="false" onAction="#next_page" prefHeight="31.0" prefWidth="164.0" text="Naslednja stran in shrani" />
-            <Button layoutX="978.0" layoutY="14.0" mnemonicParsing="false" onAction="#final_page" prefHeight="31.0" prefWidth="226.0" text="Poglej trenutne informacije o rezervaiji" />
+            <HBox spacing="10.0">
+               <children>
+                  <Label text="Ime ali imena:">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+            <HBox spacing="10.0">
+               <children>
+                  <Label text="Priimek ali priimki:">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+            <HBox spacing="10.0">
+               <children>
+                  <Label text="Naslov:">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+            <HBox spacing="10.0">
+               <children>
+                  <Label text="Email:">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+            <HBox spacing="10.0">
+               <children>
+                  <Label text="Telefon:">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+            <HBox spacing="10.0">
+               <children>
+                  <Label text="Starost:">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+            <HBox spacing="10.0">
+               <children>
+                  <Label text="Leta od pridobitve izpita:">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
          </children>
-      </Pane>
-      <Label layoutX="45.0" layoutY="184.0" prefHeight="30.0" prefWidth="45.0" text="Ime:">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Label>
-      <TextField layoutX="127.0" layoutY="187.0" />
-      <Label layoutX="45.0" layoutY="229.0" prefHeight="30.0" prefWidth="82.0" text="Priimek:">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Label>
-      <TextField layoutX="127.0" layoutY="232.0" />
-      <Label layoutX="45.0" layoutY="274.0" prefHeight="30.0" prefWidth="82.0" text="Naslov:">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Label>
-      <TextField layoutX="127.0" layoutY="277.0" />
-      <Label layoutX="45.0" layoutY="323.0" prefHeight="30.0" prefWidth="82.0" text="Email:">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Label>
-      <TextField layoutX="127.0" layoutY="326.0" />
-      <Label layoutX="45.0" layoutY="368.0" prefHeight="30.0" prefWidth="82.0" text="Telefon:">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Label>
-      <TextField layoutX="127.0" layoutY="371.0" />
-      <Label layoutX="45.0" layoutY="412.0" prefHeight="30.0" prefWidth="82.0" text="Starost:">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Label>
-      <TextField layoutX="127.0" layoutY="415.0" />
-      <Label layoutX="45.0" layoutY="458.0" prefHeight="30.0" prefWidth="226.0" text="Leta od pridobitve izpita:">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Label>
-      <TextField layoutX="271.0" layoutY="461.0" />
+      </VBox>
+      <Separator prefWidth="200.0" />
+      <HBox alignment="TOP_CENTER" spacing="10.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#first_page" text="Resetiraj">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Separator orientation="VERTICAL" />
+            <Button mnemonicParsing="false" onAction="#previous_page" text="Prejšnja stran">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Separator orientation="VERTICAL" HBox.hgrow="ALWAYS" />
+            <Button mnemonicParsing="false" onAction="#next_page" text="Naslednja stran in shrani">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Separator orientation="VERTICAL" />
+            <Label text="Stran: 3/5">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
    </children>
-</AnchorPane>
+</VBox>
