@@ -12,16 +12,14 @@ import java.io.IOException;
 import java.util.Objects;
 
 public class LandingController {
-    public Reservation reservation;
+    private static Reservation reservation;
 
-    public void new_reservation(ActionEvent event) throws IOException {
+    public void next_page(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("car1-scene.fxml")));
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
-
-        reservation = new Reservation();
     }
 
     public void into(ActionEvent e) {

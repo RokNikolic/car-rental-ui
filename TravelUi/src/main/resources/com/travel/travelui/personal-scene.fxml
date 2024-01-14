@@ -26,7 +26,7 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <TextField />
+                  <TextField fx:id="PersonNameLabel" onAction="#get_person_name" promptText="Ime ali imena" />
                </children>
                <padding>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
@@ -39,7 +39,7 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <TextField />
+                  <TextField fx:id="SurnameLabel" onAction="#get_person_surname" promptText="Priimek ali priimki" />
                </children>
                <padding>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
@@ -52,7 +52,7 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <TextField />
+                  <TextField fx:id="AddressLabel" onAction="#get_person_address" prefWidth="246.0" promptText="Naslov bivalisca" />
                </children>
                <padding>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
@@ -65,7 +65,7 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <TextField />
+                  <TextField fx:id="EmailLabel" onAction="#get_person_email" prefWidth="171.0" promptText="Elektronski naslov" />
                </children>
                <padding>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
@@ -78,7 +78,7 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <TextField />
+                  <TextField fx:id="PhoneLabel" onAction="#get_person_phone" promptText="Osebni telefon" />
                </children>
                <padding>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
@@ -91,7 +91,7 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <TextField />
+                  <TextField fx:id="AgeLabel" onAction="#get_person_age" promptText="Starost v letih" />
                </children>
                <padding>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
@@ -104,7 +104,7 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <TextField />
+                  <TextField fx:id="LicenceAgeLabel" onAction="#get_person_licence_age" promptText="Leta od pridobitve izpita" />
                </children>
                <padding>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />

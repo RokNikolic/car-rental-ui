@@ -21,15 +21,17 @@ import java.util.ResourceBundle;
 public class Car1Controller implements Initializable {
     @FXML
     private DatePicker DepartureDateLabel;
-    public void get_departure_date(ActionEvent event) {
+    public void get_departure_date() {
         LocalDate DepartureDate = DepartureDateLabel.getValue();
         String formattedDepartureDate = DepartureDate.format(DateTimeFormatter.ofPattern("dd-MMM-yyyy"));
+        System.out.println(formattedDepartureDate);
     }
     @FXML
     private DatePicker ReturnDateLabel;
-    public void get_return_date(ActionEvent event) {
+    public void get_return_date() {
         LocalDate ReturnDate = ReturnDateLabel.getValue();
         String formattedReturnDate = ReturnDate.format(DateTimeFormatter.ofPattern("dd-MMM-yyyy"));
+        System.out.println(formattedReturnDate);
     }
     @FXML
     private ChoiceBox<String> DepartureTimeLabel;
@@ -70,24 +72,31 @@ public class Car1Controller implements Initializable {
     }
     public void get_depart_time(ActionEvent event) {
         String DepartTime = DepartureTimeLabel.getValue();
+        System.out.println(DepartTime);
     }
     public void get_return_time(ActionEvent event) {
         String ReturnTime = ReturnTimeLabel.getValue();
+        System.out.println(ReturnTime);
     }
     public void get_depart_city(ActionEvent event) {
         String DepartCity = DepartureCityLabel.getValue();
+        System.out.println(DepartCity);
     }
     public void get_return_city(ActionEvent event) {
         String ReturnCity = ReturnCityLabel.getValue();
+        System.out.println(ReturnCity);
     }
     public void get_car_size(ActionEvent event) {
         String CarSize = CarSizeLabel.getValue();
+        System.out.println(CarSize);
     }
     public void get_car_gearbox(ActionEvent event) {
         String CarGearbox = CarGearboxLabel.getValue();
+        System.out.println(CarGearbox);
     }
     public void get_car_engine(ActionEvent event) {
         String CarEngine = CarEngineLabel.getValue();
+        System.out.println(CarEngine);
     }
     public void next_page(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("car2-scene.fxml")));
