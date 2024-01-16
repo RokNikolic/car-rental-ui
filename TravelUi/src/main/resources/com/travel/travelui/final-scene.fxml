@@ -330,7 +330,7 @@
                </font>
             </Button>
             <Separator orientation="VERTICAL" HBox.hgrow="ALWAYS" />
-            <Button mnemonicParsing="false" onAction="#saveDocument" text="Shrani kot dokumnt">
+            <Button mnemonicParsing="false" onAction="#saveDocument" text="Shrani">
                <font>
                   <Font size="16.0" />
                </font>

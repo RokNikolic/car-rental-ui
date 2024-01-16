@@ -81,8 +81,9 @@ public class FinalController {
         InsuranceLabel.setText(String.valueOf(reservation_in.insurance));
         FinalPriceLabel.setText(String.valueOf(reservation_in.totalPrice));
         WayOfPayLabel.setText(reservation_in.paymentMethod);
-        CardLabel.setText(reservation_in.cardNumber.replaceAll("[0-9]", "x"));
-        CCVLabel.setText(reservation_in.cardCCV.replaceAll("[0-9]", "x"));
+        CardLabel.setText(reservation_in.cardNumber.substring(0, 12).replaceAll("[0-9]", "x")
+                + reservation_in.cardNumber.substring(12));
+        CCVLabel.setText(reservation_in.cardCCV);
     }
 
     public void saveDocument() {

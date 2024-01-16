@@ -89,8 +89,14 @@ public class PaymentController implements Initializable {
         } else if (reservation.paymentMethod.equals("Kartica") && Objects.equals(reservation.cardNumber, "")) {
             ErrorLabel.setText("Izpolni številko kartice!");
             return 0;
+        } else if (reservation.paymentMethod.equals("Kartica") && !Objects.equals(reservation.cardNumber.length(), 16)) {
+            ErrorLabel.setText("Številka kartice mora biti 16 številk dolga!");
+            return 0;
         } else if (reservation.paymentMethod.equals("Kartica") && Objects.equals(reservation.cardCCV, "")) {
             ErrorLabel.setText("Izpolni številko CCV!");
+            return 0;
+        } else if (reservation.paymentMethod.equals("Kartica") && !Objects.equals(reservation.cardCCV.length(), 3)) {
+            ErrorLabel.setText("Številka CCV mora biti 3 števke dolga!");
             return 0;
         } else {
             ErrorLabel.setText("");
