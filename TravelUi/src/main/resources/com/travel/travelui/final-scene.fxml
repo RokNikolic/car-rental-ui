@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="TOP_CENTER" prefHeight="587.0" prefWidth="795.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.travel.travelui.FinalController">
+<VBox alignment="TOP_CENTER" prefHeight="668.0" prefWidth="840.0" styleClass="bg-success-subtle" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.travel.travelui.FinalController">
    <children>
       <Label text="Podatki o rezervaciji">
          <font>

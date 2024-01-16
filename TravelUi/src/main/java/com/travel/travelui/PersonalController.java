@@ -145,7 +145,7 @@ public class PersonalController {
             PaymentController controller = loader.getController();
             controller.reservation = this.reservation;
             controller.displayTotalPrice(String.valueOf(reservation.totalPrice));
-            controller.reservation.insurance = "False";
+            controller.reservation.insurance = "Ne";
         }
     }
 
@@ -158,7 +158,6 @@ public class PersonalController {
         stage.show();
 
         Car2Controller controller  = loader.getController();
-        this.reservation.insurance = "False";
         controller.reservation = this.reservation;
         controller.displaySize(reservation.carSize);
         controller.displayGearbox(reservation.carGearbox);

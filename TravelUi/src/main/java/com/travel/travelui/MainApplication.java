@@ -14,6 +14,7 @@ public class MainApplication extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
+        Application.setUserAgentStylesheet(String.valueOf(MainApplication.class.getResource("nord-light.css")));
         FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("landing-scene.fxml"));
         Scene landing_scene = new Scene(fxmlLoader.load());
         stage.setScene(landing_scene);

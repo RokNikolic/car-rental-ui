@@ -10,9 +10,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="TOP_CENTER" prefHeight="424.0" prefWidth="795.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.travel.travelui.Car1Controller">
+<VBox alignment="TOP_CENTER" prefHeight="600.0" prefWidth="840.0" styleClass="bg-success-subtle" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.travel.travelui.Car1Controller">
    <children>
-      <Label text="Izbira podrobnosti avtomobila">
+      <Label text="Izbira podrobnosti avtomobila" textAlignment="CENTER">
          <font>
             <Font size="30.0" />
          </font>

@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="TOP_CENTER" prefHeight="424.0" prefWidth="795.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.travel.travelui.Car2Controller">
+<VBox alignment="TOP_CENTER" prefHeight="600.0" prefWidth="840.0" styleClass="bg-success-subtle" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.travel.travelui.Car2Controller">
    <children>
       <Label text="Izbira avtomobila">
          <font>

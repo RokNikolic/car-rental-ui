@@ -40,10 +40,10 @@ public class PaymentController implements Initializable {
     public void checkboxChange() {
         if (InsuranceCheckBox.isSelected()) {
             displayTotalPrice(String.valueOf(reservation.totalPrice + 2 * reservation.totalDays));
-            reservation.insurance = "True";
+            reservation.insurance = "Da";
         } else {
             displayTotalPrice(String.valueOf(reservation.totalPrice));
-            reservation.insurance = "False";
+            reservation.insurance = "Ne";
         }
     }
 

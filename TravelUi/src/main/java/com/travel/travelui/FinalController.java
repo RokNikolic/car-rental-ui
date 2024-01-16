@@ -99,6 +99,7 @@ public class FinalController {
 
         PaymentController controller  = loader.getController();
         controller.reservation = this.reservation;
+        controller.displayTotalPrice(String.valueOf(reservation.totalPrice));
     }
 
     public void firstPage(ActionEvent event) throws IOException {

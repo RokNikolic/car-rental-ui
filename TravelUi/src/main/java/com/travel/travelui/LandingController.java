@@ -7,6 +7,7 @@ import javafx.stage.Stage;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import java.io.IOException;
+import java.util.Objects;
 
 public class LandingController {
     public void nextPage(ActionEvent event) throws IOException {
@@ -22,7 +23,11 @@ public class LandingController {
         controller.reservation = reservation;
     }
 
-    public void into() {
-        System.out.println("info");
+    public void into(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("info-scene.fxml")));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 }
