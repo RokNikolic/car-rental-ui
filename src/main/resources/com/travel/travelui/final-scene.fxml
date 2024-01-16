@@ -8,343 +8,319 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="TOP_CENTER" prefHeight="668.0" prefWidth="840.0" styleClass="bg-success-subtle" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.travel.travelui.FinalController">
-   <children>
-      <Label text="Podatki o rezervaciji">
+<VBox alignment="TOP_CENTER" prefHeight="668.0" prefWidth="840.0" styleClass="bg-success-subtle"
+      xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.travel.travelui.FinalController">
+   <Label text="Podatki o rezervaciji">
+      <font>
+         <Font size="30.0"/>
+      </font>
+   </Label>
+   <Separator prefWidth="200.0"/>
+   <VBox prefHeight="405.0" prefWidth="795.0">
+      <HBox spacing="10.0">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+         </padding>
+         <Label prefWidth="105.0" text="Prevzem -&gt;">
+            <font>
+               <Font size="20.0"/>
+            </font>
+         </Label>
+         <Label text="Dan:">
+            <font>
+               <Font size="20.0"/>
+            </font>
+         </Label>
+         <Label fx:id="DepartDayLabel" text="..." underline="true">
+            <font>
+               <Font size="20.0"/>
+            </font>
+         </Label>
+         <Label text="Ura:">
+            <font>
+               <Font size="20.0"/>
+            </font>
+         </Label>
+         <Label fx:id="DepartHourLabel" text="..." underline="true">
+            <font>
+               <Font size="20.0"/>
+            </font>
+         </Label>
+         <Label text="Mesto:">
+            <font>
+               <Font size="20.0"/>
+            </font>
+         </Label>
+         <Label fx:id="DepartCityLabel" text="..." underline="true">
+            <font>
+               <Font size="20.0"/>
+            </font>
+         </Label>
+      </HBox>
+      <HBox spacing="10.0">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+         </padding>
+         <Label prefWidth="105.0" text="Oddaja -&gt;">
+            <font>
+               <Font size="20.0"/>
+            </font>
+         </Label>
+         <Label text="Dan:">
+            <font>
+               <Font size="20.0"/>
+            </font>
+         </Label>
+         <Label fx:id="ReturnDayLabel" text="..." underline="true">
+            <font>
+               <Font size="20.0"/>
+            </font>
+         </Label>
+         <Label text="Ura:">
+            <font>
+               <Font size="20.0"/>
+            </font>
+         </Label>
+         <Label fx:id="ReturnHourLabel" text="..." underline="true">
+            <font>
+               <Font size="20.0"/>
+            </font>
+         </Label>
+         <Label text="Mesto:">
+            <font>
+               <Font size="20.0"/>
+            </font>
+         </Label>
+         <Label fx:id="ReturnCityLabel" text="..." underline="true">
+            <font>
+               <Font size="20.0"/>
+            </font>
+         </Label>
+      </HBox>
+      <HBox spacing="10.0">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+         </padding>
+         <Label text="Velikost:">
+            <font>
+               <Font size="20.0"/>
+            </font>
+         </Label>
+         <Label fx:id="CarSizeLabel" text="..." underline="true">
+            <font>
+               <Font size="20.0"/>
+            </font>
+         </Label>
+         <Label text="Menjalnik:">
+            <font>
+               <Font size="20.0"/>
+            </font>
+         </Label>
+         <Label fx:id="CarGearboxLabel" text="..." underline="true">
+            <font>
+               <Font size="20.0"/>
+            </font>
+         </Label>
+         <Label text="Motor:">
+            <font>
+               <Font size="20.0"/>
+            </font>
+         </Label>
+         <Label fx:id="CarEngineLabel" text="..." underline="true">
+            <font>
+               <Font size="20.0"/>
+            </font>
+         </Label>
+      </HBox>
+      <HBox spacing="10.0">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+         </padding>
+         <Label text="Avto:">
+            <font>
+               <Font size="20.0"/>
+            </font>
+         </Label>
+         <Label fx:id="CarNameLabel" text="..." underline="true">
+            <font>
+               <Font size="20.0"/>
+            </font>
+         </Label>
+      </HBox>
+      <HBox spacing="10.0">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+         </padding>
+         <Label text="Ime ali imena:">
+            <font>
+               <Font size="20.0"/>
+            </font>
+         </Label>
+         <Label fx:id="PersonNameLabel" text="..." underline="true">
+            <font>
+               <Font size="20.0"/>
+            </font>
+         </Label>
+         <Label text="Priimek ali priimki:">
+            <font>
+               <Font size="20.0"/>
+            </font>
+         </Label>
+         <Label fx:id="PersonSurnameLabel" text="..." underline="true">
+            <font>
+               <Font size="20.0"/>
+            </font>
+         </Label>
+      </HBox>
+      <HBox prefWidth="795.0" spacing="10.0">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+         </padding>
+         <Label text="Starost:">
+            <font>
+               <Font size="20.0"/>
+            </font>
+         </Label>
+         <Label fx:id="PersonAgeLabel" text="..." underline="true">
+            <font>
+               <Font size="20.0"/>
+            </font>
+         </Label>
+         <Label text="Leta od izpita:">
+            <font>
+               <Font size="20.0"/>
+            </font>
+         </Label>
+         <Label fx:id="LicenceAgeLabel" text="..." underline="true">
+            <font>
+               <Font size="20.0"/>
+            </font>
+         </Label>
+      </HBox>
+      <HBox spacing="10.0">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+         </padding>
+         <Label text="Naslov:">
+            <font>
+               <Font size="20.0"/>
+            </font>
+         </Label>
+         <Label fx:id="PersonAddressLabel" text="..." underline="true">
+            <font>
+               <Font size="20.0"/>
+            </font>
+         </Label>
+      </HBox>
+      <HBox spacing="10.0">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+         </padding>
+         <Label text="Email:">
+            <font>
+               <Font size="20.0"/>
+            </font>
+         </Label>
+         <Label fx:id="PersonEmailLabel" text="..." underline="true">
+            <font>
+               <Font size="20.0"/>
+            </font>
+         </Label>
+         <Label text="Telefon">
+            <font>
+               <Font size="20.0"/>
+            </font>
+         </Label>
+         <Label fx:id="PersonPhoneLabel" text="..." underline="true">
+            <font>
+               <Font size="20.0"/>
+            </font>
+         </Label>
+      </HBox>
+      <HBox spacing="10.0">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+         </padding>
+         <Label text="Zavarovanje:">
+            <font>
+               <Font size="20.0"/>
+            </font>
+         </Label>
+         <Label fx:id="InsuranceLabel" text="..." underline="true">
+            <font>
+               <Font size="20.0"/>
+            </font>
+         </Label>
+         <Label text="Zadnja cena:">
+            <font>
+               <Font size="20.0"/>
+            </font>
+         </Label>
+         <Label fx:id="FinalPriceLabel" text="..." underline="true">
+            <font>
+               <Font size="20.0"/>
+            </font>
+         </Label>
+         <Label text="€">
+            <font>
+               <Font size="20.0"/>
+            </font>
+         </Label>
+      </HBox>
+      <HBox spacing="10.0">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+         </padding>
+         <Label text="Način plačila:">
+            <font>
+               <Font size="20.0"/>
+            </font>
+         </Label>
+         <Label fx:id="WayOfPayLabel" text="..." underline="true">
+            <font>
+               <Font size="20.0"/>
+            </font>
+         </Label>
+         <Label fx:id="CardLabel" text="..." underline="true">
+            <font>
+               <Font size="20.0"/>
+            </font>
+         </Label>
+         <Label fx:id="CCVLabel" text="..." underline="true">
+            <font>
+               <Font size="20.0"/>
+            </font>
+         </Label>
+      </HBox>
+   </VBox>
+   <Separator prefWidth="200.0"/>
+   <HBox alignment="TOP_CENTER" spacing="10.0">
+      <padding>
+         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+      </padding>
+      <Button mnemonicParsing="false" onAction="#firstPage" text="Resetiraj">
          <font>
-            <Font size="30.0" />
+            <Font size="16.0"/>
+         </font>
+      </Button>
+      <Separator orientation="VERTICAL"/>
+      <Button mnemonicParsing="false" onAction="#previousPage" text="Prejšnja stran">
+         <font>
+            <Font size="16.0"/>
+         </font>
+      </Button>
+      <Separator orientation="VERTICAL" HBox.hgrow="ALWAYS"/>
+      <Button mnemonicParsing="false" onAction="#saveDocument" text="Shrani">
+         <font>
+            <Font size="16.0"/>
+         </font>
+      </Button>
+      <Separator orientation="VERTICAL"/>
+      <Label text="Stran: 5/5">
+         <font>
+            <Font size="20.0"/>
          </font>
       </Label>
-      <Separator prefWidth="200.0" />
-      <VBox prefHeight="405.0" prefWidth="795.0">
-         <children>
-            <HBox spacing="10.0">
-               <children>
-                  <Label prefWidth="105.0" text="Prevzem -&gt;">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-                  <Label text="Dan:">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="DepartDayLabel" text="..." underline="true">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-                  <Label text="Ura:">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="DepartHourLabel" text="..." underline="true">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-                  <Label text="Mesto:">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="DepartCityLabel" text="..." underline="true">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-               </children>
-               <padding>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-               </padding>
-            </HBox>
-            <HBox spacing="10.0">
-               <children>
-                  <Label prefWidth="105.0" text="Oddaja -&gt;">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-                  <Label text="Dan:">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="ReturnDayLabel" text="..." underline="true">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-                  <Label text="Ura:">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="ReturnHourLabel" text="..." underline="true">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-                  <Label text="Mesto:">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="ReturnCityLabel" text="..." underline="true">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-               </children>
-               <padding>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-               </padding>
-            </HBox>
-            <HBox spacing="10.0">
-               <children>
-                  <Label text="Velikost:">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="CarSizeLabel" text="..." underline="true">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-                  <Label text="Menjalnik:">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="CarGearboxLabel" text="..." underline="true">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-                  <Label text="Motor:">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="CarEngineLabel" text="..." underline="true">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-               </children>
-               <padding>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-               </padding>
-            </HBox>
-            <HBox spacing="10.0">
-               <children>
-                  <Label text="Avto:">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="CarNameLabel" text="..." underline="true">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-               </children>
-               <padding>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-               </padding>
-            </HBox>
-            <HBox spacing="10.0">
-               <children>
-                  <Label text="Ime ali imena:">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="PersonNameLabel" text="..." underline="true">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-                  <Label text="Priimek ali priimki:">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="PersonSurnameLabel" text="..." underline="true">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-               </children>
-               <padding>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-               </padding>
-            </HBox>
-            <HBox prefWidth="795.0" spacing="10.0">
-               <children>
-                  <Label text="Starost:">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="PersonAgeLabel" text="..." underline="true">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-                  <Label text="Leta od izpita:">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="LicenceAgeLabel" text="..." underline="true">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-               </children>
-               <padding>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-               </padding>
-            </HBox>
-            <HBox spacing="10.0">
-               <children>
-                  <Label text="Naslov:">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="PersonAddressLabel" text="..." underline="true">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-               </children>
-               <padding>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-               </padding>
-            </HBox>
-            <HBox spacing="10.0">
-               <children>
-                  <Label text="Email:">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="PersonEmailLabel" text="..." underline="true">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-                  <Label text="Telefon">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="PersonPhoneLabel" text="..." underline="true">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-               </children>
-               <padding>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-               </padding>
-            </HBox>
-            <HBox spacing="10.0">
-               <children>
-                  <Label text="Zavarovanje:">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="InsuranceLabel" text="..." underline="true">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-                  <Label text="Zadnja cena:">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="FinalPriceLabel" text="..." underline="true">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-                  <Label text="€">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-               </children>
-               <padding>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-               </padding>
-            </HBox>
-            <HBox spacing="10.0">
-               <children>
-                  <Label text="Način plačila:">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="WayOfPayLabel" text="..." underline="true">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="CardLabel" text="..." underline="true">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="CCVLabel" text="..." underline="true">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-               </children>
-               <padding>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-               </padding>
-            </HBox>
-         </children>
-      </VBox>
-      <Separator prefWidth="200.0" />
-      <HBox alignment="TOP_CENTER" spacing="10.0">
-         <children>
-            <Button mnemonicParsing="false" onAction="#firstPage" text="Resetiraj">
-               <font>
-                  <Font size="16.0" />
-               </font>
-            </Button>
-            <Separator orientation="VERTICAL" />
-            <Button mnemonicParsing="false" onAction="#previousPage" text="Prejšnja stran">
-               <font>
-                  <Font size="16.0" />
-               </font>
-            </Button>
-            <Separator orientation="VERTICAL" HBox.hgrow="ALWAYS" />
-            <Button mnemonicParsing="false" onAction="#saveDocument" text="Shrani">
-               <font>
-                  <Font size="16.0" />
-               </font>
-            </Button>
-            <Separator orientation="VERTICAL" />
-            <Label text="Stran: 5/5">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Label>
-         </children>
-         <padding>
-            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-         </padding>
-      </HBox>
-   </children>
+   </HBox>
 </VBox>

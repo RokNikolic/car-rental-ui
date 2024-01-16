@@ -11,129 +11,120 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="TOP_CENTER" prefHeight="600.0" prefWidth="840.0" styleClass="bg-success-subtle" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.travel.travelui.PaymentController">
-   <children>
-      <Label text="Plačilo">
-         <font>
-            <Font size="30.0" />
-         </font>
-      </Label>
-      <Separator prefWidth="200.0" />
-      <VBox>
-         <children>
-            <HBox spacing="10.0">
-               <children>
-                  <CheckBox fx:id="InsuranceCheckBox" mnemonicParsing="false" onAction="#checkboxChange" text="Želite zavarovanje za 2€ na dan?">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </CheckBox>
-               </children>
-               <padding>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-               </padding>
-            </HBox>
-            <HBox spacing="10.0">
-               <children>
-                  <Label text="Končna cena:">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="PriceLabel" text="..." underline="true">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-                  <Label text="€">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-                  <Label text="Za toliko dni najema:">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="DaysOfRentLabel" text="..." underline="true">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-               </children>
-               <padding>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-               </padding>
-            </HBox>
-            <HBox spacing="10.0">
-               <children>
-                  <Label text="Izberi metodo plačila:">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-                  <ChoiceBox fx:id="PaymentMethodLabel" prefWidth="150.0" />
-               </children>
-               <padding>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-               </padding>
-            </HBox>
-            <HBox spacing="10.0">
-               <children>
-                  <Label text="Bančna kartica:">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-                  <TextField fx:id="CreditCardLabel" disable="true" onAction="#getCreditCard" prefHeight="25.0" prefWidth="197.0" promptText="16 mestna številka kartice" />
-                  <Label text="CCV:">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-                  <TextField fx:id="CCVLabel" disable="true" onAction="#getCCV" prefHeight="25.0" prefWidth="135.0" promptText="3 mestna ccv koda" />
-               </children>
-               <padding>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-               </padding>
-            </HBox>
-         </children>
-      </VBox>
-      <Separator prefWidth="200.0" />
-      <HBox alignment="TOP_CENTER" spacing="10.0">
-         <children>
-            <Button mnemonicParsing="false" onAction="#firstPage" text="Resetiraj">
-               <font>
-                  <Font size="16.0" />
-               </font>
-            </Button>
-            <Separator orientation="VERTICAL" />
-            <Button mnemonicParsing="false" onAction="#previousPage" text="Prejšnja stran">
-               <font>
-                  <Font size="16.0" />
-               </font>
-            </Button>
-            <Separator orientation="VERTICAL" HBox.hgrow="ALWAYS" />
-            <Button mnemonicParsing="false" onAction="#nextPage" text="Naslednja stran in shrani">
-               <font>
-                  <Font size="16.0" />
-               </font>
-            </Button>
-            <Separator orientation="VERTICAL" />
-            <Label text="Stran: 4/5">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Label>
-         </children>
+<VBox alignment="TOP_CENTER" prefHeight="600.0" prefWidth="840.0" styleClass="bg-success-subtle"
+      xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.travel.travelui.PaymentController">
+   <Label text="Plačilo">
+      <font>
+         <Font size="30.0"/>
+      </font>
+   </Label>
+   <Separator prefWidth="200.0"/>
+   <VBox>
+      <HBox spacing="10.0">
          <padding>
-            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
          </padding>
+         <CheckBox fx:id="InsuranceCheckBox" mnemonicParsing="false" onAction="#checkboxChange"
+                   text="Želite zavarovanje za 2€ na dan?">
+            <font>
+               <Font size="20.0"/>
+            </font>
+         </CheckBox>
       </HBox>
-      <Label fx:id="ErrorLabel" textFill="RED">
+      <HBox spacing="10.0">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+         </padding>
+         <Label text="Končna cena:">
+            <font>
+               <Font size="20.0"/>
+            </font>
+         </Label>
+         <Label fx:id="PriceLabel" text="..." underline="true">
+            <font>
+               <Font size="20.0"/>
+            </font>
+         </Label>
+         <Label text="€">
+            <font>
+               <Font size="20.0"/>
+            </font>
+         </Label>
+         <Label text="Za toliko dni najema:">
+            <font>
+               <Font size="20.0"/>
+            </font>
+         </Label>
+         <Label fx:id="DaysOfRentLabel" text="..." underline="true">
+            <font>
+               <Font size="20.0"/>
+            </font>
+         </Label>
+      </HBox>
+      <HBox spacing="10.0">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+         </padding>
+         <Label text="Izberi metodo plačila:">
+            <font>
+               <Font size="20.0"/>
+            </font>
+         </Label>
+         <ChoiceBox fx:id="PaymentMethodLabel" prefWidth="150.0"/>
+      </HBox>
+      <HBox spacing="10.0">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+         </padding>
+         <Label text="Bančna kartica:">
+            <font>
+               <Font size="20.0"/>
+            </font>
+         </Label>
+         <TextField fx:id="CreditCardLabel" disable="true" onAction="#getCreditCard" prefHeight="25.0"
+                    prefWidth="197.0" promptText="16 mestna številka kartice"/>
+         <Label text="CCV:">
+            <font>
+               <Font size="20.0"/>
+            </font>
+         </Label>
+         <TextField fx:id="CCVLabel" disable="true" onAction="#getCCV" prefHeight="25.0" prefWidth="135.0"
+                    promptText="3 mestna ccv koda"/>
+      </HBox>
+   </VBox>
+   <Separator prefWidth="200.0"/>
+   <HBox alignment="TOP_CENTER" spacing="10.0">
+      <padding>
+         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+      </padding>
+      <Button mnemonicParsing="false" onAction="#firstPage" text="Resetiraj">
          <font>
-            <Font size="20.0" />
+            <Font size="16.0"/>
+         </font>
+      </Button>
+      <Separator orientation="VERTICAL"/>
+      <Button mnemonicParsing="false" onAction="#previousPage" text="Prejšnja stran">
+         <font>
+            <Font size="16.0"/>
+         </font>
+      </Button>
+      <Separator orientation="VERTICAL" HBox.hgrow="ALWAYS"/>
+      <Button mnemonicParsing="false" onAction="#nextPage" text="Naslednja stran in shrani">
+         <font>
+            <Font size="16.0"/>
+         </font>
+      </Button>
+      <Separator orientation="VERTICAL"/>
+      <Label text="Stran: 4/5">
+         <font>
+            <Font size="20.0"/>
          </font>
       </Label>
-   </children>
+   </HBox>
+   <Label fx:id="ErrorLabel" textFill="RED">
+      <font>
+         <Font size="20.0"/>
+      </font>
+   </Label>
 </VBox>
