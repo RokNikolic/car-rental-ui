@@ -30,7 +30,7 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <Label text="...">
+                  <Label fx:id="DepartDayLabel" text="..." underline="true">
                      <font>
                         <Font size="20.0" />
                      </font>
@@ -40,7 +40,7 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <Label text="...">
+                  <Label fx:id="DepartHourLabel" text="..." underline="true">
                      <font>
                         <Font size="20.0" />
                      </font>
@@ -50,7 +50,7 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <Label text="...">
+                  <Label fx:id="DepartCityLabel" text="..." underline="true">
                      <font>
                         <Font size="20.0" />
                      </font>
@@ -72,7 +72,7 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <Label text="...">
+                  <Label fx:id="ReturnDayLabel" text="..." underline="true">
                      <font>
                         <Font size="20.0" />
                      </font>
@@ -82,7 +82,7 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <Label text="...">
+                  <Label fx:id="ReturnHourLabel" text="..." underline="true">
                      <font>
                         <Font size="20.0" />
                      </font>
@@ -92,7 +92,7 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <Label text="...">
+                  <Label fx:id="ReturnCityLabel" text="..." underline="true">
                      <font>
                         <Font size="20.0" />
                      </font>
@@ -109,7 +109,7 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <Label text="...">
+                  <Label fx:id="CarSizeLabel" text="..." underline="true">
                      <font>
                         <Font size="20.0" />
                      </font>
@@ -119,7 +119,7 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <Label text="...">
+                  <Label fx:id="CarGearboxLabel" text="..." underline="true">
                      <font>
                         <Font size="20.0" />
                      </font>
@@ -129,7 +129,7 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <Label text="...">
+                  <Label fx:id="CarEngineLabel" text="..." underline="true">
                      <font>
                         <Font size="20.0" />
                      </font>
@@ -146,7 +146,7 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <Label text="...">
+                  <Label fx:id="CarNameLabel" text="..." underline="true">
                      <font>
                         <Font size="20.0" />
                      </font>
@@ -163,7 +163,7 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <Label text="...">
+                  <Label fx:id="PersonNameLabel" text="..." underline="true">
                      <font>
                         <Font size="20.0" />
                      </font>
@@ -173,7 +173,7 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <Label text="...">
+                  <Label fx:id="PersonSurnameLabel" text="..." underline="true">
                      <font>
                         <Font size="20.0" />
                      </font>
@@ -190,7 +190,7 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <Label text="...">
+                  <Label fx:id="PersonAgeLabel" text="..." underline="true">
                      <font>
                         <Font size="20.0" />
                      </font>
@@ -200,7 +200,7 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <Label text="...">
+                  <Label fx:id="LicenceAgeLabel" text="..." underline="true">
                      <font>
                         <Font size="20.0" />
                      </font>
@@ -217,7 +217,7 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <Label text="...">
+                  <Label fx:id="PersonAddressLabel" text="..." underline="true">
                      <font>
                         <Font size="20.0" />
                      </font>
@@ -234,7 +234,7 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <Label text="...">
+                  <Label fx:id="PersonEmailLabel" text="..." underline="true">
                      <font>
                         <Font size="20.0" />
                      </font>
@@ -244,7 +244,7 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <Label text="...">
+                  <Label fx:id="PersonPhoneLabel" text="..." underline="true">
                      <font>
                         <Font size="20.0" />
                      </font>
@@ -261,7 +261,7 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <Label text="...">
+                  <Label fx:id="InsuranceLabel" text="..." underline="true">
                      <font>
                         <Font size="20.0" />
                      </font>
@@ -271,7 +271,12 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <Label text="...">
+                  <Label fx:id="FinalPriceLabel" text="..." underline="true">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label text="€">
                      <font>
                         <Font size="20.0" />
                      </font>
@@ -288,12 +293,22 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <Label text="...">
+                  <Label fx:id="WayOfPayLabel" text="..." underline="true">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <Label text="...">
+                  <Label fx:id="CardLabel" text="..." underline="true">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label text="CCV:">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="CCVLabel" text="..." underline="true">
                      <font>
                         <Font size="20.0" />
                      </font>

@@ -26,7 +26,7 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <Label fx:id="SizeLabel" text="...">
+                  <Label fx:id="SizeLabel" text="..." underline="true">
                      <font>
                         <Font size="20.0" />
                      </font>
@@ -36,7 +36,7 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <Label fx:id="GearboxLabel" text="...">
+                  <Label fx:id="GearboxLabel" text="..." underline="true">
                      <font>
                         <Font size="20.0" />
                      </font>
@@ -46,7 +46,7 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <Label fx:id="EngineLabel" text="...">
+                  <Label fx:id="EngineLabel" text="..." underline="true">
                      <font>
                         <Font size="20.0" />
                      </font>
@@ -76,7 +76,12 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <Label fx:id="CarPriceLabel" text="...">
+                  <Label fx:id="CarPriceLabel" text="..." underline="true">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label text="€">
                      <font>
                         <Font size="20.0" />
                      </font>

@@ -82,7 +82,7 @@
             </HBox>
             <HBox spacing="10.0">
                <children>
-                  <Label prefWidth="100.0" text="Velikost:">
+                  <Label text="Velikost avtomobila:">
                      <font>
                         <Font size="20.0" />
                      </font>
@@ -95,7 +95,7 @@
             </HBox>
             <HBox spacing="10.0">
                <children>
-                  <Label prefWidth="100.0" text="Menjalnik:">
+                  <Label text="Menjalnik avtomobila:">
                      <font>
                         <Font size="20.0" />
                      </font>
@@ -108,7 +108,7 @@
             </HBox>
             <HBox spacing="10.0">
                <children>
-                  <Label prefWidth="100.0" text="Motor:">
+                  <Label text="Motor avtomobila:">
                      <font>
                         <Font size="20.0" />
                      </font>

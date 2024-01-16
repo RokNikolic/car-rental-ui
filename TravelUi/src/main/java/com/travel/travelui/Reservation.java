@@ -3,6 +3,7 @@ package com.travel.travelui;
 public class Reservation {
     String departureDate;
     String departureTime;
+    int totalDays;
     String departureLocation;
     String returnDate;
     String returnTime;
@@ -11,13 +12,16 @@ public class Reservation {
     String carGearbox;
     String carEngine;
     String carName;
-    String totalPrice;
+    int totalPrice;
     String personalName;
     String personalSurname;
     String personalAddress;
-    String personalGmail;
+    String personalEmail;
     String personalPhone;
-    int personalAge;
-    int personalAgeOfLicence;
-    Boolean insurance;
+    String personalAge;
+    String personalAgeOfLicence;
+    String insurance;
+    String paymentMethod;
+    String cardNumber;
+    String cardCCV;
 }
