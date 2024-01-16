@@ -9,7 +9,7 @@ import javafx.scene.Scene;
 import java.io.IOException;
 
 public class LandingController {
-    public void next_page(ActionEvent event) throws IOException {
+    public void nextPage(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("car1-scene.fxml"));
         Parent root = loader.load();
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();

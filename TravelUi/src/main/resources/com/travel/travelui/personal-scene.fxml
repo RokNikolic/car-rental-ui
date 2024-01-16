@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="TOP_CENTER" prefHeight="424.0" prefWidth="795.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.travel.travelui.PersonalController">
+<VBox alignment="TOP_CENTER" prefHeight="532.0" prefWidth="795.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.travel.travelui.PersonalController">
    <children>
       <Label text="Osebni podatki">
          <font>
@@ -26,7 +26,7 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="PersonNameLabel" onAction="#get_person_name" promptText="Ime ali imena" />
+                  <TextField fx:id="PersonNameLabel" onAction="#getPersonName" promptText="Ime ali imena" />
                </children>
                <padding>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
@@ -39,7 +39,7 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="SurnameLabel" onAction="#get_person_surname" promptText="Priimek ali priimki" />
+                  <TextField fx:id="SurnameLabel" onAction="#getPersonSurname" promptText="Priimek ali priimki" />
                </children>
                <padding>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
@@ -52,7 +52,7 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="AddressLabel" onAction="#get_person_address" prefWidth="246.0" promptText="Naslov bivalisca" />
+                  <TextField fx:id="AddressLabel" onAction="#getPersonAddress" prefWidth="246.0" promptText="Naslov bivalisca" />
                </children>
                <padding>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
@@ -65,7 +65,7 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="EmailLabel" onAction="#get_person_email" prefWidth="171.0" promptText="Elektronski naslov" />
+                  <TextField fx:id="EmailLabel" onAction="#getPersonEmail" prefWidth="171.0" promptText="Elektronski naslov" />
                </children>
                <padding>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
@@ -78,7 +78,7 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="PhoneLabel" onAction="#get_person_phone" promptText="Osebni telefon" />
+                  <TextField fx:id="PhoneLabel" onAction="#getPersonPhone" promptText="Osebni telefon" />
                </children>
                <padding>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
@@ -91,7 +91,7 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="AgeLabel" onAction="#get_person_age" promptText="Starost v letih" />
+                  <TextField fx:id="AgeLabel" onAction="#getPersonAge" promptText="Starost v letih" />
                </children>
                <padding>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
@@ -104,7 +104,7 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="LicenceAgeLabel" onAction="#get_person_licence_age" promptText="Leta od pridobitve izpita" />
+                  <TextField fx:id="LicenceAgeLabel" onAction="#getPersonLicenceAge" promptText="Leta od pridobitve izpita" />
                </children>
                <padding>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
@@ -115,19 +115,19 @@
       <Separator prefWidth="200.0" />
       <HBox alignment="TOP_CENTER" spacing="10.0">
          <children>
-            <Button mnemonicParsing="false" onAction="#first_page" text="Resetiraj">
+            <Button mnemonicParsing="false" onAction="#firstPage" text="Resetiraj">
                <font>
                   <Font size="16.0" />
                </font>
             </Button>
             <Separator orientation="VERTICAL" />
-            <Button mnemonicParsing="false" onAction="#previous_page" text="Prejšnja stran">
+            <Button mnemonicParsing="false" onAction="#previousPage" text="Prejšnja stran">
                <font>
                   <Font size="16.0" />
                </font>
             </Button>
             <Separator orientation="VERTICAL" HBox.hgrow="ALWAYS" />
-            <Button mnemonicParsing="false" onAction="#next_page" text="Naslednja stran in shrani">
+            <Button mnemonicParsing="false" onAction="#nextPage" text="Naslednja stran in shrani">
                <font>
                   <Font size="16.0" />
                </font>
@@ -143,5 +143,10 @@
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </padding>
       </HBox>
+      <Label fx:id="ErrorLabel" textFill="RED">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
    </children>
 </VBox>

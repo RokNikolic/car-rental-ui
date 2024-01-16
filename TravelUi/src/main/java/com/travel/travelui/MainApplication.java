@@ -23,5 +23,4 @@ public class MainApplication extends Application {
         stage.setTitle("Avtek");
         stage.show();
     }
-
 }

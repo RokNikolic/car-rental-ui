@@ -303,11 +303,6 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <Label text="CCV:">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
                   <Label fx:id="CCVLabel" text="..." underline="true">
                      <font>
                         <Font size="20.0" />
@@ -323,19 +318,19 @@
       <Separator prefWidth="200.0" />
       <HBox alignment="TOP_CENTER" spacing="10.0">
          <children>
-            <Button mnemonicParsing="false" onAction="#first_page" text="Resetiraj">
+            <Button mnemonicParsing="false" onAction="#firstPage" text="Resetiraj">
                <font>
                   <Font size="16.0" />
                </font>
             </Button>
             <Separator orientation="VERTICAL" />
-            <Button mnemonicParsing="false" onAction="#previous_page" text="Prejšnja stran">
+            <Button mnemonicParsing="false" onAction="#previousPage" text="Prejšnja stran">
                <font>
                   <Font size="16.0" />
                </font>
             </Button>
             <Separator orientation="VERTICAL" HBox.hgrow="ALWAYS" />
-            <Button mnemonicParsing="false" text="Shrani kot dokumnt">
+            <Button mnemonicParsing="false" onAction="#saveDocument" text="Shrani kot dokumnt">
                <font>
                   <Font size="16.0" />
                </font>

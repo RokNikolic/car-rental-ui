@@ -20,11 +20,6 @@ import java.util.ResourceBundle;
 
 public class Car2Controller implements Initializable {
     Reservation reservation;
-    private final String[] SmallCars = {"Renault Clio", "Volkswagen Polo", "Honda Civic"};
-    private final String[] MedCars = {"Toyota Avensis", "Audi A5", "Skoda Octavia", "Honda Accord"};
-    private final String[] BigCars = {"Volkswagen Passat", "Seat Leon", "Mercedes Benz S Class"};
-
-    private final Map<String, Integer> carPrices = new HashMap<>();
 
     @FXML
     private Label SizeLabel;
@@ -36,24 +31,35 @@ public class Car2Controller implements Initializable {
     private Label EngineLabel;
     @FXML
     private Label CarPriceLabel;
+    @FXML
+    private Label ErrorLabel;
+    private final String[] bigCars = {"Volkswagen Passat", "Seat Leon", "Mercedes Benz S Class"};
+    private final String[] medCars = {"Toyota Avensis", "Audi A5", "Skoda Octavia", "Honda Accord"};
+    private final String[] smallCars = {"Renault Clio", "Volkswagen Polo", "Honda Civic"};
+    private final Map<String, Integer> carPrices = new HashMap<>();
+
     public void displaySize(String CarSize) {
         SizeLabel.setText(CarSize);
         switch (CarSize) {
-            case "Velik" -> ChoseCarLabel.getItems().addAll(BigCars);
-            case "Srednji" -> ChoseCarLabel.getItems().addAll(MedCars);
-            case "Majhen" -> ChoseCarLabel.getItems().addAll(SmallCars);
+            case "Velik" -> ChoseCarLabel.getItems().addAll(bigCars);
+            case "Srednji" -> ChoseCarLabel.getItems().addAll(medCars);
+            case "Majhen" -> ChoseCarLabel.getItems().addAll(smallCars);
             case null, default -> System.out.println(CarSize);
         }
     }
+
     public void displayGearbox(String CarGearbox) {
         GearboxLabel.setText(CarGearbox);
     }
+
     public void displayEngine(String CarEngine) {
         EngineLabel.setText(CarEngine);
     }
+
     public void displayPrice(int CarPrice) {
         CarPriceLabel.setText(String.valueOf(CarPrice));
     }
+
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
         carPrices.put("Renault Clio", 100);
@@ -66,29 +72,44 @@ public class Car2Controller implements Initializable {
         carPrices.put("Volkswagen Passat", 200);
         carPrices.put("Seat Leon", 210);
         carPrices.put("Mercedes Benz S Class", 220);
-        ChoseCarLabel.setOnAction(this::get_chosen_car);
+        ChoseCarLabel.setOnAction(this::getChosenCar);
     }
-    public void get_chosen_car(ActionEvent event) {
+
+    public void getChosenCar(ActionEvent event) {
         String ChosenCar = ChoseCarLabel.getValue();
         reservation.carName = ChosenCar;
         int priceOfCar = carPrices.get(ChosenCar);
         displayPrice(priceOfCar);
         System.out.println(priceOfCar);
         reservation.totalPrice = priceOfCar;
+        ErrorLabel.setText("");
     }
 
-    public void next_page(ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("personal-scene.fxml"));
-        Parent root = loader.load();
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-
-        PersonalController controller  = loader.getController();
-        controller.reservation = this.reservation;
+    private int checkForErrors() {
+        if (reservation.carName == null) {
+            ErrorLabel.setText("Izberi avto!");
+            return 0;
+        } else {
+            ErrorLabel.setText("");
+            return 1;
+        }
     }
-    public void previous_page(ActionEvent event) throws IOException {
+
+    public void nextPage(ActionEvent event) throws IOException {
+        if (checkForErrors() == 1) {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("personal-scene.fxml"));
+            Parent root = loader.load();
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+
+            PersonalController controller = loader.getController();
+            controller.reservation = this.reservation;
+        }
+    }
+
+    public void previousPage(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("car1-scene.fxml"));
         Parent root = loader.load();
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -99,7 +120,8 @@ public class Car2Controller implements Initializable {
         Car1Controller controller  = loader.getController();
         controller.reservation = this.reservation;
     }
-    public void first_page(ActionEvent event) throws IOException {
+
+    public void firstPage(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("landing-scene.fxml")));
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);

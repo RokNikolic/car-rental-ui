@@ -85,7 +85,11 @@ public class FinalController {
         CCVLabel.setText(reservation_in.cardCCV.replaceAll("[0-9]", "x"));
     }
 
-    public void previous_page(ActionEvent event) throws IOException {
+    public void saveDocument() {
+        System.out.println("Save document!");
+    }
+
+    public void previousPage(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("payment-scene.fxml"));
         Parent root = loader.load();
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -96,7 +100,8 @@ public class FinalController {
         PaymentController controller  = loader.getController();
         controller.reservation = this.reservation;
     }
-    public void first_page(ActionEvent event) throws IOException {
+
+    public void firstPage(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("landing-scene.fxml")));
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);

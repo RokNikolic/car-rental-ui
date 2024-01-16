@@ -20,10 +20,24 @@ import java.util.ResourceBundle;
 
 public class PaymentController implements Initializable {
     Reservation reservation;
+
     @FXML
     private CheckBox InsuranceCheckBox;
+    @FXML
+    private Label PriceLabel;
+    @FXML
+    private Label DaysOfRentLabel;
+    @FXML
+    private ChoiceBox<String> PaymentMethodLabel;
+    @FXML
+    private TextField CreditCardLabel;
+    @FXML
+    private TextField CCVLabel;
+    @FXML
+    private Label ErrorLabel;
+    private final String[] Methods = {"Gotovina", "Kartica"};
 
-    public void checkbox_change() {
+    public void checkboxChange() {
         if (InsuranceCheckBox.isSelected()) {
             displayTotalPrice(String.valueOf(reservation.totalPrice + 2 * reservation.totalDays));
             reservation.insurance = "True";
@@ -33,27 +47,18 @@ public class PaymentController implements Initializable {
         }
     }
 
-    @FXML
-    private Label PriceLabel;
-    @FXML
-    private Label DaysOfRentLabel;
     public void displayTotalPrice(String TotalPrice) {
         PriceLabel.setText(TotalPrice);
         DaysOfRentLabel.setText(String.valueOf(reservation.totalDays));
     }
-    @FXML
-    private ChoiceBox<String> PaymentMethodLabel;
-    private final String[] Methods = {"Gotovina", "Kartica"};
+
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
         PaymentMethodLabel.getItems().addAll(Methods);
-        PaymentMethodLabel.setOnAction(this::get_payment_method);
+        PaymentMethodLabel.setOnAction(this::getPaymentMethod);
     }
-    @FXML
-    private TextField CreditCardLabel;
-    @FXML
-    private TextField CCVLabel;
-    public void get_payment_method(ActionEvent event) {
+
+    public void getPaymentMethod(ActionEvent event) {
         String PaymentMethod = PaymentMethodLabel.getValue();
         System.out.println(PaymentMethod);
         reservation.paymentMethod = PaymentMethod;
@@ -65,29 +70,54 @@ public class PaymentController implements Initializable {
             CCVLabel.setDisable(true);
         }
     }
-    public void get_credit_card() {
+
+    public void getCreditCard() {
         reservation.cardNumber = CreditCardLabel.getText();
     }
-    public void get_CCV() {
+
+    public void getCCV() {
         reservation.cardCCV = CCVLabel.getText();
     }
-    public void next_page(ActionEvent event) throws IOException {
-        get_credit_card();
-        get_CCV();
-        reservation.totalPrice = Integer.parseInt(PriceLabel.getText());
 
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("final-scene.fxml"));
-        Parent root = loader.load();
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-
-        FinalController controller  = loader.getController();
-        controller.reservation = this.reservation;
-        controller.displayAll(this.reservation);
+    private int checkForErrors() {
+        if (reservation.insurance == null) {
+            ErrorLabel.setText("Izpolni zavarovanje!");
+            return 0;
+        } else if (reservation.paymentMethod == null) {
+            ErrorLabel.setText("Izpolni metodo plačila!");
+            return 0;
+        } else if (reservation.paymentMethod.equals("Kartica") && Objects.equals(reservation.cardNumber, "")) {
+            ErrorLabel.setText("Izpolni številko kartice!");
+            return 0;
+        } else if (reservation.paymentMethod.equals("Kartica") && Objects.equals(reservation.cardCCV, "")) {
+            ErrorLabel.setText("Izpolni številko CCV!");
+            return 0;
+        } else {
+            ErrorLabel.setText("");
+            return 1;
+        }
     }
-    public void previous_page(ActionEvent event) throws IOException {
+
+    public void nextPage(ActionEvent event) throws IOException {
+        getCreditCard();
+        getCCV();
+
+        if (checkForErrors() == 1) {
+            reservation.totalPrice = Integer.parseInt(PriceLabel.getText());
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("final-scene.fxml"));
+            Parent root = loader.load();
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+
+            FinalController controller = loader.getController();
+            controller.reservation = this.reservation;
+            controller.displayAll(this.reservation);
+        }
+    }
+
+    public void previousPage(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("personal-scene.fxml"));
         Parent root = loader.load();
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -98,7 +128,8 @@ public class PaymentController implements Initializable {
         PersonalController controller  = loader.getController();
         controller.reservation = this.reservation;
     }
-    public void first_page(ActionEvent event) throws IOException {
+
+    public void firstPage(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("landing-scene.fxml")));
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);

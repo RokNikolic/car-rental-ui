@@ -18,7 +18,7 @@
       <Separator />
       <HBox alignment="TOP_CENTER" spacing="10.0">
          <children>
-            <Button mnemonicParsing="false" onAction="#next_page" text="Nova rezervacija">
+            <Button mnemonicParsing="false" onAction="#nextPage" text="Nova rezervacija">
                <font>
                   <Font size="16.0" />
                </font></Button>
