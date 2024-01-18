@@ -1,4 +1,4 @@
-package com.travel.travelui;
+package com.rok.rentalui;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -35,15 +35,15 @@ public class PaymentController implements Initializable {
     private TextField CCVLabel;
     @FXML
     private Label ErrorLabel;
-    private final String[] Methods = {"Gotovina", "Kartica"};
+    private final String[] Methods = {"Cash", "Card"};
 
     public void checkboxChange() {
         if (InsuranceCheckBox.isSelected()) {
             displayTotalPrice(String.valueOf(reservation.totalPrice + 2 * reservation.totalDays));
-            reservation.insurance = "Da";
+            reservation.insurance = "True";
         } else {
             displayTotalPrice(String.valueOf(reservation.totalPrice));
-            reservation.insurance = "Ne";
+            reservation.insurance = "False";
         }
     }
 
@@ -62,7 +62,7 @@ public class PaymentController implements Initializable {
         String PaymentMethod = PaymentMethodLabel.getValue();
         System.out.println(PaymentMethod);
         reservation.paymentMethod = PaymentMethod;
-        if (Objects.equals(PaymentMethod, "Kartica")) {
+        if (Objects.equals(PaymentMethod, "Card")) {
             CreditCardLabel.setDisable(false);
             CCVLabel.setDisable(false);
         } else {
@@ -81,22 +81,22 @@ public class PaymentController implements Initializable {
 
     private int checkForErrors() {
         if (reservation.insurance == null) {
-            ErrorLabel.setText("Izpolni zavarovanje!");
+            ErrorLabel.setText("Enter insurance!");
             return 0;
         } else if (reservation.paymentMethod == null) {
-            ErrorLabel.setText("Izpolni metodo plačila!");
+            ErrorLabel.setText("Enter payment method!");
             return 0;
-        } else if (reservation.paymentMethod.equals("Kartica") && Objects.equals(reservation.cardNumber, "")) {
-            ErrorLabel.setText("Izpolni številko kartice!");
+        } else if (reservation.paymentMethod.equals("Card") && Objects.equals(reservation.cardNumber, "")) {
+            ErrorLabel.setText("Enter time number!");
             return 0;
-        } else if (reservation.paymentMethod.equals("Kartica") && !Objects.equals(reservation.cardNumber.length(), 16)) {
-            ErrorLabel.setText("Številka kartice mora biti 16 številk dolga!");
+        } else if (reservation.paymentMethod.equals("Card") && !Objects.equals(reservation.cardNumber.length(), 16)) {
+            ErrorLabel.setText("Card number must be 16 digits long!");
             return 0;
-        } else if (reservation.paymentMethod.equals("Kartica") && Objects.equals(reservation.cardCCV, "")) {
-            ErrorLabel.setText("Izpolni številko CCV!");
+        } else if (reservation.paymentMethod.equals("Card") && Objects.equals(reservation.cardCCV, "")) {
+            ErrorLabel.setText("Enter CCV!");
             return 0;
-        } else if (reservation.paymentMethod.equals("Kartica") && !Objects.equals(reservation.cardCCV.length(), 3)) {
-            ErrorLabel.setText("Številka CCV mora biti 3 števke dolga!");
+        } else if (reservation.paymentMethod.equals("Card") && !Objects.equals(reservation.cardCCV.length(), 3)) {
+            ErrorLabel.setText("CCV must be 3 digits long!");
             return 0;
         } else {
             ErrorLabel.setText("");

@@ -1,4 +1,4 @@
-package com.travel.travelui;
+package com.rok.rentalui;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -81,8 +81,10 @@ public class FinalController {
         InsuranceLabel.setText(String.valueOf(reservation_in.insurance));
         FinalPriceLabel.setText(String.valueOf(reservation_in.totalPrice));
         WayOfPayLabel.setText(reservation_in.paymentMethod);
+        if (!Objects.equals(reservation_in.cardNumber, "")) {
         CardLabel.setText(reservation_in.cardNumber.substring(0, 12).replaceAll("[0-9]", "x")
                 + reservation_in.cardNumber.substring(12));
+        }
         CCVLabel.setText(reservation_in.cardCCV);
     }
 

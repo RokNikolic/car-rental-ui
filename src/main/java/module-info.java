@@ -1,9 +1,9 @@
-module com.travel.travelui {
+module com.rok.rentalui {
     requires javafx.controls;
     requires javafx.fxml;
 
     requires org.controlsfx.controls;
 
-    opens com.travel.travelui to javafx.fxml;
-    exports com.travel.travelui;
+    opens com.rok.rentalui to javafx.fxml;
+    exports com.rok.rentalui;
 }

@@ -1,4 +1,4 @@
-package com.travel.travelui;
+package com.rok.rentalui;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;

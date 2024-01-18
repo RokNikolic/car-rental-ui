@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.travel</groupId>
-    <artifactId>TravelUi</artifactId>
+    <artifactId>CarRentalUi</artifactId>
     <version>1.0-SNAPSHOT</version>
     <name>TravelUi</name>
 
@@ -64,7 +64,7 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>com.travel.travelui/com.travel.travelui.HelloApplication</mainClass>
+                            <mainClass>com.travel.travelui/com.rok.rentalui.MainApplication</mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
                             <jlinkImageName>app</jlinkImageName>

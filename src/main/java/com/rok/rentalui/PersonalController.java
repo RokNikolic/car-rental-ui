@@ -1,4 +1,4 @@
-package com.travel.travelui;
+package com.rok.rentalui;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -84,40 +84,40 @@ public class PersonalController {
 
     private int checkForErrors() {
         if (Objects.equals(reservation.personalName, "")) {
-            ErrorLabel.setText("Izpolni ime osebe!");
+            ErrorLabel.setText("Enter customer name!");
             return 0;
         } else if (reservation.personalName.matches("[0-9]+")) {
-            ErrorLabel.setText("Ime ne sme vsebovati števil ali simbolov");
+            ErrorLabel.setText("Name can not contain numbers!");
             return 0;
         } else if (Objects.equals(reservation.personalSurname, "")) {
-            ErrorLabel.setText("Izpolni priimek osebe!");
+            ErrorLabel.setText("Enter customer surname!");
             return 0;
         } else if (reservation.personalSurname.matches("[0-9]+")) {
-            ErrorLabel.setText("Priimek ne sme vsebovati števil ali simbolov");
+            ErrorLabel.setText("Surname can not contain numbers");
             return 0;
         } else if (Objects.equals(reservation.personalAddress, "")) {
-            ErrorLabel.setText("Izpolni naslov osebe!");
+            ErrorLabel.setText("Enter customer address!");
             return 0;
         } else if (Objects.equals(reservation.personalEmail, "")) {
-            ErrorLabel.setText("Izpolni email osebe!");
+            ErrorLabel.setText("Enter customer email!");
             return 0;
         } else if (Objects.equals(reservation.personalPhone, "")) {
-            ErrorLabel.setText("Izpolni telefon osebe!");
+            ErrorLabel.setText("Enter customer phone!");
             return 0;
         } else if (reservation.personalPhone.matches("[a-zA-Z]+")) {
-            ErrorLabel.setText("Telefonska številka ne sme vsebovati črk");
+            ErrorLabel.setText("Phone number can't contain letters or symbols!");
             return 0;
         } else if (Objects.equals(reservation.personalAge, "")) {
-            ErrorLabel.setText("Izpolni starost osebe!");
+            ErrorLabel.setText("Enter customer age!");
             return 0;
         }else if (reservation.personalAge.matches("[a-zA-Z]+")) {
-            ErrorLabel.setText("Starost osebe ne sme vsebovati črk");
+            ErrorLabel.setText("Customer age can't contain letters or symbols!");
             return 0;
         } else if (Objects.equals(reservation.personalAgeOfLicence, "")) {
-            ErrorLabel.setText("Izpolni leta od pridobitve vozniškega izpita!");
+            ErrorLabel.setText("Enter amount of time since licence acquisition!");
             return 0;
         } else if (reservation.personalAgeOfLicence.matches("[a-zA-Z]+")) {
-            ErrorLabel.setText("Leta ne smejo vsebovati črk");
+            ErrorLabel.setText("Age can't contain letters or symbols!");
             return 0;
         } else {
             ErrorLabel.setText("");
@@ -145,7 +145,7 @@ public class PersonalController {
             PaymentController controller = loader.getController();
             controller.reservation = this.reservation;
             controller.displayTotalPrice(String.valueOf(reservation.totalPrice));
-            controller.reservation.insurance = "Ne";
+            controller.reservation.insurance = "False";
         }
     }
 

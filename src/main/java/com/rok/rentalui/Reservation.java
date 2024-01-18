@@ -1,4 +1,4 @@
-package com.travel.travelui;
+package com.rok.rentalui;
 
 public class Reservation {
     String departureDate;

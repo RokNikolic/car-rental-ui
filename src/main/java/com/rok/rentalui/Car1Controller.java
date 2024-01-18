@@ -1,4 +1,4 @@
-package com.travel.travelui;
+package com.rok.rentalui;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -46,10 +46,10 @@ public class Car1Controller implements Initializable {
     private LocalDate DepartureDate;
     private LocalDate ReturnDate;
     private final String[] times = {"01:00", "02:00", "03:00", "04:00", "05:00", "06:00", "07:00", "08:00", "09:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00", "19:00", "20:00", "21:00", "22:00", "23:00", "24:00"};
-    private final String[] cities = {"Ljubljana", "Maribor", "Celje", "Kranj", "Velenje", "Koper", "Novo Mesto", "Murska Sobota", "Jesenice", "Portoroz", "letalisce Brnik", "letalisce Maribor"};
-    private final String[] sizes = {"Velik", "Srednji", "Majhen"};
-    private final String[] gearboxes = {"Ročni", "Samodejen"};
-    private final String[] engines = {"Bencinski", "Dizelski"};
+    private final String[] cities = {"London", "Paris", "Rome", "Berlin", "Amsterdam"};
+    private final String[] sizes = {"Big", "Middle", "Small"};
+    private final String[] gearboxes = {"Manual", "Automatic"};
+    private final String[] engines = {"Gas", "Diesel"};
 
     public void getDepartureDate() {
         DepartureDate = DepartureDateLabel.getValue();
@@ -136,10 +136,10 @@ public class Car1Controller implements Initializable {
 
     private int checkDates() {
         if (DepartureDate == null) {
-            ErrorLabel.setText("Izpolni dan prevzema!");
+            ErrorLabel.setText("Enter departure date!");
             return 0;
         } else if (ReturnDate == null) {
-            ErrorLabel.setText("Izpolni dan oddaje!");
+            ErrorLabel.setText("Enter return date!");
             return 0;
         } else {
             ErrorLabel.setText("");
@@ -148,34 +148,34 @@ public class Car1Controller implements Initializable {
     }
 
     private int checkForErrors() {
-            if (reservation.departureTime == null) {
-                ErrorLabel.setText("Izpolni čas prevzema!");
-                return 0;
-            } else if (reservation.departureLocation == null) {
-                ErrorLabel.setText("Izpolni mesto prevzema!");
-                return 0;
-            } else if (reservation.returnTime == null) {
-                ErrorLabel.setText("Izpolni čas oddaje!");
-                return 0;
-            } else if (reservation.returnLocation == null) {
-                ErrorLabel.setText("Izpolni mesto oddaje!");
-                return 0;
-            } else if (reservation.carSize == null) {
-                ErrorLabel.setText("Izpolni velikost avtomobila!");
-                return 0;
-            } else if (reservation.carGearbox == null) {
-                ErrorLabel.setText("Izpolni menjalnik avtomobila!");
-                return 0;
-            } else if (reservation.carEngine == null) {
-                ErrorLabel.setText("Izpolni motor avtomobila!");
-                return 0;
-            } else if (reservation.totalDays < 0) {
-                ErrorLabel.setText("Datum oddaje nastavljen pred prevzemom");
-                return 0;
-            } else {
-                ErrorLabel.setText("");
-                return 1;
-            }
+        if (reservation.departureTime == null) {
+            ErrorLabel.setText("Enter departure time!");
+            return 0;
+        } else if (reservation.departureLocation == null) {
+            ErrorLabel.setText("Enter departure location!");
+            return 0;
+        } else if (reservation.returnTime == null) {
+            ErrorLabel.setText("Enter return time!");
+            return 0;
+        } else if (reservation.returnLocation == null) {
+            ErrorLabel.setText("Enter return location!");
+            return 0;
+        } else if (reservation.carSize == null) {
+            ErrorLabel.setText("Enter car size!");
+            return 0;
+        } else if (reservation.carGearbox == null) {
+            ErrorLabel.setText("Enter car gearbox!");
+            return 0;
+        } else if (reservation.carEngine == null) {
+            ErrorLabel.setText("Enter car engine!");
+            return 0;
+        } else if (reservation.totalDays < 0) {
+            ErrorLabel.setText("Return date set before departure date!");
+            return 0;
+        } else {
+            ErrorLabel.setText("");
+            return 1;
+        }
     }
 
     public void nextPage(ActionEvent event) throws IOException {

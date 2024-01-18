@@ -1,4 +1,4 @@
-package com.travel.travelui;
+package com.rok.rentalui;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -41,9 +41,9 @@ public class Car2Controller implements Initializable {
     public void displaySize(String CarSize) {
         SizeLabel.setText(CarSize);
         switch (CarSize) {
-            case "Velik" -> ChoseCarLabel.getItems().addAll(bigCars);
-            case "Srednji" -> ChoseCarLabel.getItems().addAll(medCars);
-            case "Majhen" -> ChoseCarLabel.getItems().addAll(smallCars);
+            case "Big" -> ChoseCarLabel.getItems().addAll(bigCars);
+            case "Middle" -> ChoseCarLabel.getItems().addAll(medCars);
+            case "Small" -> ChoseCarLabel.getItems().addAll(smallCars);
             case null, default -> System.out.println(CarSize);
         }
     }
@@ -87,7 +87,7 @@ public class Car2Controller implements Initializable {
 
     private int checkForErrors() {
         if (reservation.carName == null) {
-            ErrorLabel.setText("Izberi avto!");
+            ErrorLabel.setText("Chose car!");
             return 0;
         } else {
             ErrorLabel.setText("");
