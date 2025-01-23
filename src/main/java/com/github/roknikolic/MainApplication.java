@@ -1,4 +1,4 @@
-package com.rok.rentalui;
+package com.github.roknikolic;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

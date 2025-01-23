@@ -11,7 +11,7 @@
 
 <VBox alignment="TOP_CENTER" prefHeight="600.0" prefWidth="840.0" styleClass="bg-success-subtle"
       xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="com.rok.rentalui.PersonalController">
+      fx:controller="com.github.roknikolic.PersonalController">
    <Label text="Personal information">
       <font>
          <Font size="30.0"/>

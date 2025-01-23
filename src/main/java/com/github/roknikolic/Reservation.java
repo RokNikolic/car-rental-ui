@@ -1,4 +1,4 @@
-package com.rok.rentalui;
+package com.github.roknikolic;
 
 public class Reservation {
     String departureDate;

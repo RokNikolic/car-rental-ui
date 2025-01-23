@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="TOP_CENTER" prefHeight="600.0" prefWidth="840.0" styleClass="bg-success-subtle" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.rok.rentalui.Car1Controller">
+<VBox alignment="TOP_CENTER" prefHeight="600.0" prefWidth="840.0" styleClass="bg-success-subtle" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.roknikolic.Car1Controller">
    <Label text="Car details choices" textAlignment="CENTER">
       <font>
          <Font size="30.0" />

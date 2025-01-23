@@ -4,6 +4,6 @@ module com.rok.rentalui {
 
     requires org.controlsfx.controls;
 
-    opens com.rok.rentalui to javafx.fxml;
-    exports com.rok.rentalui;
+    opens com.github.roknikolic to javafx.fxml;
+    exports com.github.roknikolic;
 }

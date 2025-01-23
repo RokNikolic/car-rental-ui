@@ -1,4 +1,4 @@
-package com.rok.rentalui;
+package com.github.roknikolic;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
